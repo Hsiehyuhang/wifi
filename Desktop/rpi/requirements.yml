@@ -1,0 +1,4 @@
+---
+- src: infothrill.rpi-boot-config
+  path: ./workspace/roles/
+ 

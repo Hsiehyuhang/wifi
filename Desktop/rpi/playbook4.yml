@@ -1,0 +1,7 @@
+---
+- name: Raspberry Pi Basic Settings
+  hosts: pi
+  become: true
+  tasks:
+    - name: Rename hostname
+      shell: 'echo rpi > /etc/hostname'

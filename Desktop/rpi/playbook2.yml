@@ -1,0 +1,21 @@
+---
+
+- name: Raspberry Pi Basic Settings
+  hosts: pi
+  become: true
+  tasks:
+    - name: Disable bluetooth LE
+      systemd:
+        name: bluetooth
+        enabled: no
+        state: stopped
+      tags:
+        - bluetooth
+
+    - name: Enable bluetooth LE
+      systemd:
+        name: bluetooth
+        enabled: yes
+        state: started
+      tags:
+        -bluetooth

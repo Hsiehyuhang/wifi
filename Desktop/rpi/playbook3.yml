@@ -1,0 +1,9 @@
+---
+- name: Raspberry Pi Basic Settings
+  hosts: pi
+  become: true
+  tasks:
+    - name: Setup wifi
+      copy:
+        src: /home/max/ssh_config
+        dest: /etc/ssh/ssh_config
