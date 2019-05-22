@@ -1,4 +1,0 @@
----
-- hosts: pi
-  roles:
-    - { role: my_first_jenkins_job, become: yes }
